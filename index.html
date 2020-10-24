@@ -25,8 +25,8 @@
 
   <title>Booklist Web App</title>
 </head>
-<body>
-  <div class="container mt-4">
+<body style="background:url(main-cover.jpg) center/cover no-repeat;">
+  <div class="container mt-4 jumbotron" style="background:#e9c46a">
     <h1 class="display-4 text-center"><i class="fas fa-book-reader text-success"></i>My<span class="text-success">Book</span>List</h1>
     <form id="book-form">
       <div class="form-group">
@@ -41,15 +41,16 @@
         <label for="publish">Publish Year</label>
         <input type="text" id="publish" class="form-control">
       </div>
-      <input type="submit" value="Add New Book" class="btn btn-success btn-block">
+      <input type="submit" value="Add New Book" class="btn btn-success btn-block" id="submit">
     </form>
 
     <table class="table table-striped mt-4">
       <thead>
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Publish Year</th>
+        <tr class="table-dark">
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Publish Year</th>
+          <th scope="col">Actions</th>
         </tr>
       </thead>
       <tbody id="book-list"></tbody>
